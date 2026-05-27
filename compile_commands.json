@@ -1,0 +1,42 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-pic",
+      "-Isrc/kernel/include",
+      "-c",
+      "-o",
+      "build/main.o",
+      "src/kernel/main.c"
+    ],
+    "directory": "/home/n4chz/code_projects/MakersOS",
+    "file": "/home/n4chz/code_projects/MakersOS/src/kernel/main.c",
+    "output": "/home/n4chz/code_projects/MakersOS/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-std=gnu99",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-pic",
+      "-Isrc/kernel/include",
+      "-c",
+      "-o",
+      "build/terminal.o",
+      "src/kernel/terminal.c"
+    ],
+    "directory": "/home/n4chz/code_projects/MakersOS",
+    "file": "/home/n4chz/code_projects/MakersOS/src/kernel/terminal.c",
+    "output": "/home/n4chz/code_projects/MakersOS/build/terminal.o"
+  }
+]
