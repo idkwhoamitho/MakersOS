@@ -1,7 +1,7 @@
 #include "include/gdt.h"
 #include "include/terminal.h"
 
-extern struct GDT target[5];
+struct GDT target[5];
 struct GDT_PTR gdt_pointer;
 
 void initialize_gdt()
