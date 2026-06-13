@@ -21,14 +21,15 @@ typedef struct IDT_PTR{
 
 
 __attribute__((aligned(0x10)))
-static idt_entry_t idt_entry[IDT_MAX_DESCRIPTOR];
-static idt_ptr_t idtr;
+extern idt_entry_t idt_entry[IDT_MAX_DESCRIPTOR];
+extern idt_ptr_t idtr;
 static bool vectors[IDT_MAX_DESCRIPTOR];
 extern void* isr_stub_table[];
 
 
 void idt_set_descriptor(uint8_t vector, void* isr, uint8_t  flags);
 void init_idt();
+
 
 
 
