@@ -5,7 +5,7 @@
 
 void init_keyboard(){
   outb(0x21, inb(0x21) & ~(1 << 1));
-  terminal_writestring("[KEYBOARD] flushing...\n");
+  terminal_writestring("\n[KEYBOARD] flushing...\n");
   while (inb(0x64) & 0x01) {
         inb(0x60); // Read and drop the data byte
   }
