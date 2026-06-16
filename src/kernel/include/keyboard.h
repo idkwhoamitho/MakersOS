@@ -2,6 +2,8 @@
 #define KEYBOARD_H 
 
  
+const char keyboard_table[128];
+
 
 extern void irq_keyboard_handler();
 
