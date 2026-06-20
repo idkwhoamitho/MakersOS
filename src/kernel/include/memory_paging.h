@@ -18,17 +18,17 @@ typedef struct PAGING_T{
   uint8_t upper_addr;
   uint32_t rsdv: 1;
   uint8_t lower_addr;
-}__atribute__((packed)) PAGING_T; 
+}__attribute__((packed)) PAGING_T; 
 
-__atribute__((aligned(4096)))
-struct PAGING_T table_entry[1024];
-uint32_t paging_ptr; 
+__attribute__((aligned(4096)))
+extern struct PAGING_T table_entry[1024];
+extern uint32_t paging_ptr; 
 
-extern void load_paging();
+extern void load_paging(uint32_t ptr);
 void init_paging(void);
 
-void *get_addr(*void virtual_addr);
-void map_page(*void phys_addr,*void virtual_addr, unsigned int flags, uint32_t r_w);
+void *get_addr(void* virtual_addr);
+void map_page(uint32_t physical_addr,uint8_t flags,struct PAGING_T *page);
 
 
 
